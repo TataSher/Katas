@@ -19,8 +19,13 @@ describe 'max_sequence()' do
   it 'returns a positive number if a positive and negative is given in an array' do
     expect(max_sequence([1, -1])).to eq(1)
   end
-  it 'returns a sum of positive numbers in a sequence' do
+  it 'returns a larger number if given 3 numbers with a negative in the middle' do
     expect(max_sequence([1, -1, 2])).to eq(2)
   end
-
+  it 'returns a sum of positive numbers before the negative number' do
+    expect(max_sequence([1, 2, -1])).to eq(3)
+  end
+  it 'returns a the maximum sum in the sequence of numbers' do
+    expect(max_sequence([-2, 1, -3, 4, -1, 2, 1, -5, 4])).to eq(6)
+  end
 end
