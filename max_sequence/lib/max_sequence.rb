@@ -6,8 +6,6 @@ def max_sequence(array)
 
   if array.all? { |number| number < 0 }
     return 0
-  elsif array.all? { |number| number > 0 }
-    return array.sum
   else
     array.each {|number| 
     current_sum = [number, current_sum + number].max
