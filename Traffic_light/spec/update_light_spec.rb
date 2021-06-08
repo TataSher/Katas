@@ -7,4 +7,7 @@ describe '#update_light' do
   it 'takes a yellow light and returns red' do
     expect(update_light('yellow')).to eq('red')
   end
+  it 'takes a red light and returns green' do
+    expect(update_light('red')).to eq('green')
+  end
 end

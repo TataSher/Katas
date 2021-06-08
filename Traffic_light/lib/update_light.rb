@@ -3,5 +3,7 @@ def update_light(light_colour)
     'yellow'
   elsif light_colour == 'yellow'
     'red'
+  elsif light_colour == 'red'
+    'green'
   end
 end
