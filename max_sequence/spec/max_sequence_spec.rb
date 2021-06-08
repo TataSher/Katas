@@ -8,13 +8,19 @@ describe 'max_sequence()' do
     expect(max_sequence([1, 2, 3])).to eq(6)
   end
   it 'returns a 0 if only a negative number is given' do
-    expect(max_sequence([-1])).to eq(0)
+    expect(max_sequence([-32])).to eq(0)
   end
   it 'returns a 0 if several negative numbers are given only' do
     expect(max_sequence([-1, -2, -3])).to eq(0)
   end
   it 'returns a 0 if empty array is given' do
     expect(max_sequence([])).to eq(0)
+  end
+  it 'returns a positive number if a positive and negative is given in an array' do
+    expect(max_sequence([1, -1])).to eq(1)
+  end
+  it 'returns a sum of positive numbers in a sequence' do
+    expect(max_sequence([1, -1, 2])).to eq(2)
   end
 
 end

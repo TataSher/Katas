@@ -15,8 +15,11 @@ Empty list is considered to have zero greatest sum. Note that the empty list or 
 
 
 Input                                            |  Output
-max_sequence([])                                 |  0
-max_sequence([-2, 1, -3, 4, -1, 2, 1, -5, 4])    |  6
 max_sequence([11])                               | 11
+max_sequence([1, 2 ,3])                          | 6
 max_sequence([-32])                              | 0
+max_sequence([-1, -2, -3])                       | 0
+max_sequence([])                                 | 0
+max_sequence([1, 2 ,-1])                         | 3
+max_sequence([-2, 1, -3, 4, -1, 2, 1, -5, 4])    | 6
 max_sequence([-2, 1, -7, 4, -10, 2, 1, 5, 4])    | 12
