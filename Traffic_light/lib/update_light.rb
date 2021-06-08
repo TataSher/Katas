@@ -5,5 +5,7 @@ def update_light(light_colour)
     'red'
   elsif light_colour == 'red'
     'green'
+  else
+    raise 'Wrong input'
   end
 end
