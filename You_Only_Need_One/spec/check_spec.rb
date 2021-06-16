@@ -13,4 +13,10 @@ describe "#check" do
   it 'returns true if a number given doesnt match a number in the array' do
     expect(check([1, 3, 5], 6)).to eq false 
   end
+  it 'returns true if a letter given matches a letter in the array' do
+    expect(check(["a", "b"], "a")).to eq true 
+  end
+  it 'returns false if a letter given doesnt match a letter in the array' do
+    expect(check(["a", "b"], "c")).to eq false 
+  end
 end
