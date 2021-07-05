@@ -10,4 +10,8 @@ describe '#arithmetic' do
   it 'multiplies numbers with multiply operator' do
     expect(arithmetic(5,2,"multiply")).to eq 10
   end
+  it 'divides numbers with divide operator' do
+    expect(arithmetic(10,5,"divide")).to eq 2
+  end
+
 end

@@ -5,5 +5,7 @@ def arithmetic(number_1, number_2, operator)
     number_1 - number_2
   elsif operator == 'multiply'
     number_1 * number_2
+  elsif operator == 'divide'
+    number_1 / number_2
   end
 end
