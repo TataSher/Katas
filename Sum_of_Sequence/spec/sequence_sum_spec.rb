@@ -13,4 +13,7 @@ describe '#sequence_sum' do
   it 'receives begin, end and odd step value and returns the sum of the sequence created' do
     expect(sequence_sum(1,5,1)).to eq(15)
   end
+  it 'receives negative values and returns the sum of the sequence created' do
+    expect(sequence_sum(-1, -5, -3)).to eq(-5)
+  end
 end
