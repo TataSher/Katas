@@ -6,6 +6,5 @@ def sequenceSum(start_value, end_value, step_value)
       @new_array << number
     end
   end
-  p @new_array
-  @new_array.sum
+  start_value > end_value ? 0 : @new_array.sum
 end
