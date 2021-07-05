@@ -1,3 +1,3 @@
 def triangular(number)
-  number
+  (1..number).sum
 end
