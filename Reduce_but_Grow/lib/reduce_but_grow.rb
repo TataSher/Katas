@@ -1,6 +1,10 @@
 def grow(array)
   array.each do |integer|
-    @integer = integer
+    if array.index(integer) == 0
+      @product = integer
+    else 
+      @product *= integer
+    end
   end
-  @integer
+  @product
 end
