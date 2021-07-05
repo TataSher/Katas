@@ -10,4 +10,7 @@ describe 'triangular' do
   it 'returns 6 when given 3' do
     expect(triangular(3)).to eq 6
   end
+  it 'returns 0 for out of range numbers' do
+    expect(triangular(-10)).to eq 0
+  end
 end
