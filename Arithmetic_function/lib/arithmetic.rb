@@ -6,5 +6,5 @@ def arithmetic(number_1, number_2, operator)
     'multiply' => numbers.reduce(:*),
     'divide' => numbers.reduce(:/)
   }
-operators[operator]
+  operators[operator]
 end
