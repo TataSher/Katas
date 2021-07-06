@@ -10,4 +10,7 @@ describe '#dirReduc' do
   it 'returns empty array if West and East directions given' do
     expect(dirReduc(["WEST", "EAST"])).to eq([])
   end
+  it 'returns directions only if not repeated consecutively' do
+    expect(dirReduc(["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"])).to eq(["WEST"])
+  end
 end
