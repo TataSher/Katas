@@ -7,4 +7,7 @@ describe '#dirReduc' do
   it 'returns empty array if North and South directions given' do
     expect(dirReduc(["NORTH", "SOUTH"])).to eq([])
   end
+  it 'returns empty array if West and East directions given' do
+    expect(dirReduc(["WEST", "EAST"])).to eq([])
+  end
 end
