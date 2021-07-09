@@ -1,8 +1,12 @@
 def vowel_back(str)
   alphabet = "abcdefghijklmnopqrstuvwxyz"
-    if alphabet[0...-9].include?(str)
+  consonants = "bcdfghjklmnpqrstvwxyz"
+  vowels = "aeiou"
+    if alphabet[0...-9].include?(str) && consonants.include?(str)
       str = alphabet[alphabet.index(str) + 9]
-    elsif alphabet[17..25] 
+    elsif alphabet[17..25].include?(str) &&consonants.include?(str)
       str = alphabet[alphabet.index(str) - 17]
+    elsif alphabet[4..25].include?(str) && vowels.include?(str)
+      str = alphabet[alphabet.index(str) - 5]
     end
 end
