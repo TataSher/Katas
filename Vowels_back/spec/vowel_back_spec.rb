@@ -19,4 +19,7 @@ describe '#vowel_back' do
   it "Moves 'd' and 'e' to 'a'" do
     expect(vowel_back('de')).to eq('aa')
   end
+  it "Reverts letters that become 'code' to their original places" do
+    expect(vowel_back('tfiv')).to eq('tfiv')
+  end
 end
