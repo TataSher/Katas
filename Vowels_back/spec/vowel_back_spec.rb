@@ -10,4 +10,7 @@ describe '#vowel_back' do
   it 'Moves vowels back 5 places through the alphabet' do 
     expect(vowel_back('u')).to eq('p')
   end
+  it "Moves vowels back 5 places through the alphabet passing 'a' and starting at 'z'" do 
+    expect(vowel_back('a')).to eq('v')
+  end
 end
