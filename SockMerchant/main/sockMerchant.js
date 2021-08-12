@@ -1,8 +1,10 @@
 function sockMerchant(n, ar) {
-  if (ar[0] === ar[1]) {
-    return 1
-  } else {
-    return 0
+  let pairCount = 0
+  for (let i = 0; i < n; i++) {
+    if (ar[i] === ar[i+1]) {
+      return Paircount = 1
+    }
   }
+  return pairCount
 }
 module.exports = sockMerchant;
