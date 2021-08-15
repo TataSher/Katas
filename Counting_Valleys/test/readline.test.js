@@ -1,0 +1,9 @@
+const countingValleys = require('../main/countingValleys');
+
+test('when given 2 steps with a valley returns 1', () => {
+  expect(countingValleys(2, 'DU')).toBe(1);
+});
+
+test('when given 2 steps with a mountaint returns 0', () => {
+  expect(countingValleys(2, 'UD')).toBe(1);
+});
