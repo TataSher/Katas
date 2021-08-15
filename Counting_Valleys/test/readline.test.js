@@ -12,6 +12,6 @@ test('when given 4 steps with 2 valleys returns 2', () => {
   expect(countingValleys(4, 'DUDU')).toBe(2);
 })
 
-test('when given 4 steps with 2 valleys returns 2', () => {
+test('when given 8 steps with 1 valleys returns 1', () => {
   expect(countingValleys(8, 'UDDDUDUU')).toBe(1);
 })
