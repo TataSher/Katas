@@ -1,9 +1,8 @@
 function minimumBribes(q) {
   const originalQueue = [...q].sort()
   let bribeCount = 0
-  for (let i = 1; i < q.length; i++) {
-    console.log(q[i-1] === originalQueue[i])
-    if (q[i-1] === originalQueue[i]) { 
+  for (let i = 0; i < q.length-1; i++) {
+    if ( originalQueue[i] === q[i+2] || originalQueue[i]=== q[i+1]) { 
       bribeCount++
     }
   }
