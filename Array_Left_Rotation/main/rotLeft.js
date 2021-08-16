@@ -5,6 +5,5 @@ function rotLeft(a, d) {
         newArray.shift()
   }
   return newArray.join(' ');
-
 }
 module.exports = rotLeft;
