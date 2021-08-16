@@ -1,4 +1,5 @@
 function repeatedString(s, n) {
-  return s.length
+  let longString = s.repeat(n)
+  return longString.length
 }
 module.exports = repeatedString;
