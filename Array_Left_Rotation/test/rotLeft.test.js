@@ -7,3 +7,11 @@ test('When given array length 2 and rotation value 1 returns "2 1"', () => {
 test('When given array length 3 and rotation value 1 returns "2 3 1"', () => {
   expect(rotLeft(3, 1)).toBe("2 3 1");
 });
+
+test('When given array length 4 and rotation value 1 returns "2 3 4 1"', () => {
+  expect(rotLeft(4, 1)).toBe("2 3 4 1");
+});
+
+test('When given array length 4 and rotation value 2 returns "3 4 1 2"', () => {
+  expect(rotLeft(4, 2)).toBe("3 4 1 2");
+});

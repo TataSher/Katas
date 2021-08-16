@@ -1,12 +1,8 @@
 function rotLeft(a, d) {
   let newArray = [ ...Array(a).keys() ].map( i => i+1);
-  for (let i = 0; i < a; i++) {
-    if (i === 0) {
-      newArray[newArray.length] = newArray[i];
-      newArray.shift()
-      console.log(newArray)
-    }
-    // } else { newArray[i-1] = newArray[i]}
+  for (let j = 0; j < d; j++) {
+        newArray[newArray.length] = newArray[0];
+        newArray.shift()
   }
   return newArray.join(' ');
 
