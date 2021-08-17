@@ -1,17 +1,22 @@
 function minimumBribes(q) {
-  const originalQueue = [...q].sort()
   let bribeCount = 0
-  for (let i = 0; i < q.length-1; i++) {
-    if (originalQueue[i] === q[i+2] || originalQueue[i]=== q[i+1]) { 
-      bribeCount++
-      i++
-    } else if (originalQueue[i] === q[i]){
-      bribeCount
-    } else { if (i != q.length - 1 || i != q.length - 2) {
-      throw "Too Chaotic"
-      }
+  let chaotic = false
+  for (let i = q.length; i > 0; i--) {
+    if ((i + 1) - q[i] > 2) {
+      chaotic = true
     }
   }
-  return bribeCount;
+  for (let i = q.length; i > 0; i--) {
+    if (q[i] === (i+1)){
+      bribeCount
+    } else if ((i + 1) - q[i] === 2 || (i + 1) - q[i]  === 1 ) { 
+      bribeCount++
+    }
+  }
+  if (chaotic === true) {
+    return "Too Chaotic"
+  } else {
+    return bribeCount
+  }
 }
 module.exports = minimumBribes;
