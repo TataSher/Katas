@@ -11,7 +11,7 @@ function arrayManipulation(n, queries) {
         array[i] += value;
     }
   }
-  maxValue = array.sort()[n-1]
+  let maxValue = array.sort()[n-1]
   return maxValue
 }
 module.exports = arrayManipulation;
