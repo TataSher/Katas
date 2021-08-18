@@ -8,10 +8,10 @@ function arrayManipulation(n, queries) {
    
 
     for (let i = startIndex; i <= endIndex; i++) {
-      array[i] += value
+        array[i] += value;
     }
   }
-
-  return Math.max(...array)
+  maxValue = array.sort()[n-1]
+  return maxValue
 }
 module.exports = arrayManipulation;
