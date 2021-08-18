@@ -1,5 +1,6 @@
 function arrayManipulation(n, queries) {
   let array = new Array(n).fill(0);
+  let maxValue = 0
 
   for (let j = 0; j < queries.length; j++){
     let startIndex = queries[j][0]-1
@@ -9,12 +10,12 @@ function arrayManipulation(n, queries) {
 
     for (let i = startIndex; i < endIndex; i++) {
         array[i] += value;
+        if (array[i] > maxValue) {
+          maxValue = array[i]
+        }
     }
   }
-  array.sort(function(a, b) {
-    return a - b;
-  });
-  let maxValue = array[n-1]
+
   return maxValue
 }
 module.exports = arrayManipulation;
