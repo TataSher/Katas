@@ -1,15 +1,25 @@
 function arrayManipulation(n, queries) {
-  let array = new Array(n).fill(0);
+  let array = Array(n + 1)
   let maxValue = 0
+  let currentNumber = 0
    
-    queries.map(query => {
-    for (let i = query[0]-1; i < query[1]; i++) {
-        array[i] += query[2];
-        if (array[i] > maxValue) {
-          maxValue = array[i]
+    queries.forEach(([startIndex, endIndex, value]) => {
+      array[startIndex] = array[startIndex] || {start: 0, end: 0 };
+      array[endIndex] = array[endIndex] || {start: 0, end: 0};
+      array[startIndex].start += value
+      array[endIndex].end += value
+    });
+
+    array.forEach(cell => {
+      if (cell) {
+        currentNumber += cell.start;
+
+        if (currentNumber > maxValue) {
+          maxValue = currentNumber;
         }
-    }
-  })
+        currentNumber -= cell.end;
+      }
+    });
 
   return maxValue
 }
