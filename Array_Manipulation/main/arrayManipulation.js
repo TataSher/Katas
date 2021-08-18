@@ -1,6 +1,13 @@
 function arrayManipulation(n, queries) {
-  array = new Array(n).fill(0);
-  console.log(array)
-  return 2
+  let array = new Array(n).fill(0);
+  let startIndex = queries[0][0]
+  let endIndex = queries[0][1]
+  let value = queries[0][2]
+
+  for (let i = startIndex; i <= endIndex; i++) {
+    array[i] += value
+  }
+
+  return Math.max(...array)
 }
 module.exports = arrayManipulation;
