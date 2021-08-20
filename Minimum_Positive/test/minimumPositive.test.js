@@ -11,3 +11,7 @@ test('gets [2] and returns 1', () => {
 test('gets [1, 2] and returns 3', () => {
   expect(minimumPositive([1, 2])).toBe(3);
 });
+
+test('gets a longer array with repeated numbers', () => {
+  expect(minimumPositive([1, 3, 6, 4, 1, 2])).toBe(5);
+});
