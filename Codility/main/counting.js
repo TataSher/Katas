@@ -9,9 +9,8 @@ function counting (A, m) {
 
   for (let i = 0; i < n; i++) {
     count[A[i]] += 1
-    console.log(A[i], count )
+
   }
-  console.log(count)
 return count[m]
 
 }
